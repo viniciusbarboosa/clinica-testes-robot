@@ -1,0 +1,21 @@
+# Resultados gerados pelo Robot Framework
+results/
+output.xml
+log.html
+report.html
+selenium-screenshot-*.png
+
+# Arquivos gerados pela Browser library
+browser/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Variáveis de ambiente e credenciais
+.env
+
+# Editor
+.vscode/

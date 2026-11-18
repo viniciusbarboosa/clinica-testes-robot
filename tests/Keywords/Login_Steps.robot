@@ -48,4 +48,15 @@ Login com email inexistente
     Sleep    1s
 
     Wait For Elements State    text="${mensagem}"    visible    timeout=10s
- 
+
+
+Submissão com campos em branco
+    Click    css=button:has-text("Entrar")
+
+    Sleep    1s
+
+    Wait For Elements State    text="Informe o e-mail."    visible    timeout=2s
+    Wait For Elements State    text="Informe a senha."    visible    timeout=2s
+
+
+    

@@ -59,4 +59,15 @@ Submissão com campos em branco
     Wait For Elements State    text="Informe a senha."    visible    timeout=2s
 
 
-    
+Login com submissão pelo teclado
+    ${email}=    Set Variable    sistema@gmail.com
+    ${senha}=    Set Variable    @Sistema123
+
+    Fill Text    css=input[name="Input.Email"]    ${email}
+    Fill Text    css=input[type="password"]    ${senha}
+
+    Press Keys    css=input[type="password"]    Enter
+
+    Sleep    1s
+
+    Get Title   ==   Marcação

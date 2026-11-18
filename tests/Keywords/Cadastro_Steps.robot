@@ -51,3 +51,10 @@ Verificar Que Saiu Da Tela De Cadastro
 Tirar Print Da Tela
     [Arguments]    ${nome}
     Take Screenshot    ${nome}
+
+Fazer login
+    ${email} Set Variable sistema@gmail.com
+    ${senha} Set Variable @Sistema123
+
+    Log ${email}
+    Log ${senha}

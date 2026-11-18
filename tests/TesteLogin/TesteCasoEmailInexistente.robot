@@ -8,8 +8,8 @@ Test Teardown    Close Browser
 
 
 *** Test Cases ***
-Caso de Teste 01: Validar login com credenciais válidas
-    [Documentation]  Valida se o usuário consegue logar com as credenciais válidas
-    [Tags]  positivo
-    Login com credenciais válidas
+Caso de Teste 03: Validar login com usuário inexistente
+    [Documentation]  Valida se o usuário consegue logar com dados inexistentes
+    [Tags]  negativo
+    Login com email inexistente
 

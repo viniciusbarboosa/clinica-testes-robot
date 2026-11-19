@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-19T01:54:48.344361" rpa="false" schemaversion="5">
+<suite id="s1" name="TesteMedico" source="C:\Users\Lenovo\clinica-testes-robot-novo\tests\TesteMedico\TesteMedico.robot">
+<kw name="Realizar Login No Sistema Viita" owner="Medico_Steps" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-11-19T01:54:57.099587" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Lenovo\\clinica-testes-robot-novo\\results\\browser\\traces\\temp\\d0bf0d88-6daf-48b0-8d18-f1e776c1b14e"}</msg>
+<msg time="2026-11-19T01:54:57.761229" level="INFO">Starting Browser process C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62722</msg>
+<msg time="2026-11-19T01:55:09.167646" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Lenovo\\clinica-testes-robot-novo\\results\\browser\\traces\\temp\\d0bf0d88-6daf-48b0-8d18-f1e776c1b14e"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-11-19T01:54:57.095511" elapsed="12.074149"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>30s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2026-11-19T01:55:09.173275" elapsed="0.297575"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-11-19T01:55:09.739438" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  }
+}</msg>
+<msg time="2026-11-19T01:55:10.756570" level="INFO">Successfully created context. </msg>
+<msg time="2026-11-19T01:55:10.756570" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1366, 'height': 768}}</msg>
+<arg>viewport={'width': 1366, 'height': 768}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-11-19T01:55:09.475423" elapsed="1.281147"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-11-19T01:55:31.540409" level="INFO">Successfully initialized new page object and opened url: http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-11-19T01:55:10.760633" elapsed="20.784336"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:32.249799" level="INFO">Waited for Element with selector role=heading[name=/entrar/i] at state visible</msg>
+<arg>${TITULO_ENTRAR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:31.548372" elapsed="0.701427"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:32.680978" level="INFO">Waited for Element with selector css=input:not([type="hidden"]):not([type="password"]):not([type="checkbox"]):not([type="submit"]) &gt;&gt; nth=0 at state visible</msg>
+<arg>${INPUT_EMAIL_LOGIN}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:32.249799" elapsed="0.431179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:34.197365" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:32.682991" elapsed="1.514374"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:34.244389" level="INFO">Fills the text 'sistema@gmail.com' in the given field.</msg>
+<arg>${INPUT_EMAIL_LOGIN}</arg>
+<arg>${EMAIL_SISTEMA}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:34.197365" elapsed="0.768164"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_EMAIL_LOGIN}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:35.042315" elapsed="0.374854"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:35.431281" level="INFO">Fills the text '@Sistema123' in the given field.</msg>
+<arg>${INPUT_SENHA_LOGIN}</arg>
+<arg>${SENHA_SISTEMA}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:35.419181" elapsed="0.062801"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_SENHA_LOGIN}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:35.481982" elapsed="0.064502"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:35.561902" level="INFO">Clicks the element 'css=:is(button[type="submit"], button:has-text("Entrar"), input[type="submit"]) &gt;&gt; nth=0'.</msg>
+<arg>${BTN_ENTRAR_LOGIN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:35.548501" elapsed="0.919278"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:36.768103" level="INFO">Waited for Element with selector role=heading[name=/entrar/i] at state hidden</msg>
+<arg>${TITULO_ENTRAR}</arg>
+<arg>hidden</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:36.475840" elapsed="0.294278"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:54:57.091484" elapsed="39.687010"/>
+</kw>
+<test id="s1-t1" name="CT01 - Cadastrar medico com todas as informacoes completas" line="17">
+<kw name="Acessar Pagina De Medicos" owner="Medico_Steps" type="SETUP">
+<kw name="Go To" owner="Browser">
+<msg time="2026-11-19T01:55:37.493439" level="INFO">Successfully opened URL http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-11-19T01:55:36.916432" elapsed="0.579022"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:37.614305" level="INFO">Waited for Element with selector text=Novo médico &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:37.495454" elapsed="0.124892"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.270196" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:37.733860" elapsed="1.536336"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:36.900011" elapsed="2.370185"/>
+</kw>
+<kw name="Gerar Codigo Unico">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.402190" level="INFO">${timestamp} = 1795064139</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.335684" elapsed="0.066506"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.474583" level="INFO">${codigo} = 064139</msg>
+<var>${codigo}</var>
+<arg>str(${timestamp})[-6:]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.402190" elapsed="0.072393"/>
+</kw>
+<return>
+<value>${codigo}</value>
+<status status="PASS" start="2026-11-19T01:55:39.474583" elapsed="0.004035"/>
+</return>
+<msg time="2026-11-19T01:55:39.480637" level="INFO">${codigo} = 064139</msg>
+<var>${codigo}</var>
+<status status="PASS" start="2026-11-19T01:55:39.331648" elapsed="0.148989"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.551957" level="INFO">${nome} = Dr. Teste Automatizado 064139</msg>
+<var>${nome}</var>
+<arg>Dr. Teste Automatizado ${codigo}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.547915" elapsed="0.006063"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.567308" level="INFO">${crm} = 064139-PE</msg>
+<var>${crm}</var>
+<arg>${codigo}-PE</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.565289" elapsed="0.004038"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.572329" level="INFO">${especialidade} = Cardiologia</msg>
+<var>${especialidade}</var>
+<arg>Cardiologia</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.572329" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:39.576394" level="INFO">${telefone} = (81) 99999-1234</msg>
+<var>${telefone}</var>
+<arg>(81) 99999-1234</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.574378" elapsed="0.002016"/>
+</kw>
+<kw name="Abrir Formulario De Cadastro De Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:39.581437" level="INFO">Clicks the element 'text=Novo médico &gt;&gt; nth=0'.</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:39.579423" elapsed="0.496225"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:44.385488" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" style="max-width:800px;max-height:800px;"/&gt;&lt;/a&gt;</msg>
+<msg time="2026-11-19T01:55:44.385488" level="INFO">See also file:///C:/Users/Lenovo/clinica-testes-robot-novo/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-11-19T01:55:44.393544" level="FAIL">TimeoutError: locator.waitFor: Timeout 4000ms exceeded.
+Call log:
+  - waiting for locator(':is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar"))').first() to be visible
+</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2026-11-19T01:55:40.092068" elapsed="4.354068">TimeoutError: locator.waitFor: Timeout 4000ms exceeded.
+Call log:
+  - waiting for locator(':is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar"))').first() to be visible
+</status>
+</kw>
+<msg time="2026-11-19T01:55:44.446136" level="INFO">${abriu} = False</msg>
+<var>${abriu}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-11-19T01:55:40.079674" elapsed="4.368477"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${abriu}">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:44.452181" level="INFO">Clicks the element 'text=Novo médico &gt;&gt; nth=0'.</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:44.450166" elapsed="0.084244"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:45.086345" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:44.536424" elapsed="0.552179"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:44.448151" elapsed="0.640452"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:44.448151" elapsed="0.640452"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:45.602648" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:45.088603" elapsed="0.514045"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:39.579423" elapsed="6.027258"/>
+</kw>
+<kw name="Preencher Dados Do Medico" owner="Medico_Steps">
+<if>
+<branch type="IF" condition="'${nome}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:45.738486" level="INFO">Fills the text 'Dr. Teste Automatizado 064139' in the given field.</msg>
+<arg>${INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:45.732594" elapsed="0.307433"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_NOME}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.042042" elapsed="0.190121"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:45.700863" elapsed="0.551489"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:45.700863" elapsed="0.566149"/>
+</if>
+<if>
+<branch type="IF" condition="'${crm}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:46.285772" level="INFO">Fills the text '064139-PE' in the given field.</msg>
+<arg>${INPUT_CRM}</arg>
+<arg>${crm}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.282746" elapsed="0.135785"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_CRM}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.418531" elapsed="0.200274"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:46.267012" elapsed="0.353807"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:46.267012" elapsed="0.362640"/>
+</if>
+<if>
+<branch type="IF" condition="'${especialidade}' != '${EMPTY}'">
+<kw name="Get Property" owner="Browser">
+<msg time="2026-11-19T01:55:46.825072" level="INFO">Property: 'INPUT'</msg>
+<msg time="2026-11-19T01:55:46.829100" level="INFO">${tag} = INPUT</msg>
+<var>${tag}</var>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>tagName</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.633679" elapsed="0.195421"/>
+</kw>
+<if>
+<branch type="IF" condition="'${tag}' == 'SELECT'">
+<kw name="Select Options By" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>label</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:46.829100" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:46.829100" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:46.833128" level="INFO">Fills the text 'Cardiologia' in the given field.</msg>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.831113" elapsed="0.057174"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:46.831113" elapsed="0.057174"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:46.829100" elapsed="0.059187"/>
+</if>
+<kw name="Press Keys" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.890303" elapsed="0.062410"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:46.629652" elapsed="0.323061"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:46.629652" elapsed="0.323061"/>
+</if>
+<if>
+<branch type="IF" condition="'${telefone}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:46.963365" level="INFO">Fills the text '(81) 99999-1234' in the given field.</msg>
+<arg>${INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:46.961351" elapsed="0.074318"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_TELEFONE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.043737" elapsed="0.100400"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:46.952713" elapsed="0.191424"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:46.952713" elapsed="0.191424"/>
+</if>
+<arg>nome=${nome}</arg>
+<arg>crm=${crm}</arg>
+<arg>especialidade=${especialidade}</arg>
+<arg>telefone=${telefone}</arg>
+<status status="PASS" start="2026-11-19T01:55:45.696838" elapsed="1.447299"/>
+</kw>
+<kw name="Salvar Cadastro Do Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:47.162993" level="INFO">Clicks the element 'css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0'.</msg>
+<arg>${BTN_SALVAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.152206" elapsed="0.161173"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:47.150188" elapsed="0.163191"/>
+</kw>
+<kw name="Validar Medico Na Listagem" owner="Medico_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:47.570261" level="INFO">${linha} = css=tr:has-text("064139-PE") &gt;&gt; nth=0</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${crm}") &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.568246" elapsed="0.002015"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:47.606572" level="INFO">Waited for Element with selector css=tr:has-text("064139-PE") &gt;&gt; nth=0 at state visible</msg>
+<arg>${linha}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.574224" elapsed="0.034364"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-11-19T01:55:47.677808" level="INFO">Text: ['D\nDr. Teste Automatizado 064139\n\t064139-PE\tCardiologia\t(81) 99999-1234\t ']</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${nome}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.608588" elapsed="0.079956"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-11-19T01:55:47.742421" level="INFO">Text: ['D\nDr. Teste Automatizado 064139\n\t064139-PE\tCardiologia\t(81) 99999-1234\t ']</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${especialidade}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.690323" elapsed="0.052098"/>
+</kw>
+<arg>nome=${nome}</arg>
+<arg>crm=${crm}</arg>
+<arg>especialidade=${especialidade}</arg>
+<status status="PASS" start="2026-11-19T01:55:47.566231" elapsed="0.176190"/>
+</kw>
+<tag>cadastro</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2026-11-19T01:55:36.782527" elapsed="10.965943"/>
+</test>
+<test id="s1-t2" name="CT02 - Impedir cadastro de medico sem informar CRM" line="30">
+<kw name="Acessar Pagina De Medicos" owner="Medico_Steps" type="SETUP">
+<kw name="Go To" owner="Browser">
+<msg time="2026-11-19T01:55:50.014049" level="INFO">Successfully opened URL http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-11-19T01:55:47.883923" elapsed="2.130126"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:50.202514" level="INFO">Waited for Element with selector text=Novo médico &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:50.014049" elapsed="0.192835"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:51.758507" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:50.206884" elapsed="1.553637"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:47.881906" elapsed="3.878615"/>
+</kw>
+<kw name="Gerar Codigo Unico">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-11-19T01:55:51.972627" level="INFO">${timestamp} = 1795064151</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-11-19T01:55:51.966595" elapsed="0.006032"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-19T01:55:51.974714" level="INFO">${codigo} = 064151</msg>
+<var>${codigo}</var>
+<arg>str(${timestamp})[-6:]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-19T01:55:51.974714" elapsed="0.002016"/>
+</kw>
+<return>
+<value>${codigo}</value>
+<status status="PASS" start="2026-11-19T01:55:51.976730" elapsed="0.000000"/>
+</return>
+<msg time="2026-11-19T01:55:51.976730" level="INFO">${codigo} = 064151</msg>
+<var>${codigo}</var>
+<status status="PASS" start="2026-11-19T01:55:51.951905" elapsed="0.024825"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:52.023467" level="INFO">${nome} = Dr. Sem CRM 064151</msg>
+<var>${nome}</var>
+<arg>Dr. Sem CRM ${codigo}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.016457" elapsed="0.007010"/>
+</kw>
+<kw name="Abrir Formulario De Cadastro De Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:52.061514" level="INFO">Clicks the element 'text=Novo médico &gt;&gt; nth=0'.</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.051442" elapsed="0.113585"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:52.297714" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.175278" elapsed="0.124450"/>
+</kw>
+<msg time="2026-11-19T01:55:52.301743" level="INFO">${abriu} = True</msg>
+<var>${abriu}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.167043" elapsed="0.134700"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${abriu}">
+<kw name="Click" owner="Browser">
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:52.308199" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:52.308199" elapsed="0.002019"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:52.301743" elapsed="0.008475"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:52.301743" elapsed="0.008475"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:52.819060" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.310218" elapsed="0.508842"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:52.042895" elapsed="0.776165"/>
+</kw>
+<kw name="Preencher Dados Do Medico" owner="Medico_Steps">
+<if>
+<branch type="IF" condition="'${nome}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:52.830589" level="INFO">Fills the text 'Dr. Sem CRM 064151' in the given field.</msg>
+<arg>${INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.830589" elapsed="0.103490"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_NOME}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:52.936096" elapsed="0.157949"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:52.828575" elapsed="0.265470"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:52.828575" elapsed="0.265470"/>
+</if>
+<if>
+<branch type="IF" condition="'${crm}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<arg>${INPUT_CRM}</arg>
+<arg>${crm}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:53.096061" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_CRM}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:53.096061" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:53.094045" elapsed="0.002016"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:53.094045" elapsed="0.004030"/>
+</if>
+<if>
+<branch type="IF" condition="'${especialidade}' != '${EMPTY}'">
+<kw name="Get Property" owner="Browser">
+<msg time="2026-11-19T01:55:53.199747" level="INFO">Property: 'INPUT'</msg>
+<msg time="2026-11-19T01:55:53.199747" level="INFO">${tag} = INPUT</msg>
+<var>${tag}</var>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>tagName</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.098075" elapsed="0.101672"/>
+</kw>
+<if>
+<branch type="IF" condition="'${tag}' == 'SELECT'">
+<kw name="Select Options By" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>label</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:53.201763" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:53.199747" elapsed="0.002016"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:53.211627" level="INFO">Fills the text 'Ortopedia' in the given field.</msg>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.201763" elapsed="0.093654"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:53.201763" elapsed="0.093654"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:53.199747" elapsed="0.095670"/>
+</if>
+<kw name="Press Keys" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.297432" elapsed="0.102761"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:53.098075" elapsed="0.302118"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:53.098075" elapsed="0.304132"/>
+</if>
+<if>
+<branch type="IF" condition="'${telefone}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:53.410708" level="INFO">Fills the text '(81) 98888-0000' in the given field.</msg>
+<arg>${INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.402207" elapsed="0.075434"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_TELEFONE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.477641" elapsed="0.057739"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:53.402207" elapsed="0.133173"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:53.402207" elapsed="0.133173"/>
+</if>
+<arg>nome=${nome}</arg>
+<arg>crm=${EMPTY}</arg>
+<arg>especialidade=Ortopedia</arg>
+<arg>telefone=(81) 98888-0000</arg>
+<status status="PASS" start="2026-11-19T01:55:52.828575" elapsed="0.706805"/>
+</kw>
+<kw name="Salvar Cadastro Do Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:53.551919" level="INFO">Clicks the element 'css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0'.</msg>
+<arg>${BTN_SALVAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:53.549905" elapsed="0.318650"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:53.547891" elapsed="0.320664"/>
+</kw>
+<kw name="Validar Bloqueio Por Campo Obrigatorio" owner="Medico_Steps">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:55.065485" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:54.065200" elapsed="1.000285"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:55.095795" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.067499" elapsed="0.028296"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-11-19T01:55:55.325429" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-11-19T01:55:55.325429" level="INFO">${html5_valido} = True</msg>
+<var>${html5_valido}</var>
+<arg>${seletor_campo}</arg>
+<arg>(el) =&gt; el.checkValidity()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes the given JavaScript in the browser page.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.264030" elapsed="0.061399"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-19T01:55:55.329191" level="INFO">Validação HTML5 do campo: True</msg>
+<arg>Validação HTML5 do campo: ${html5_valido}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.327444" elapsed="0.001747"/>
+</kw>
+<if>
+<branch type="IF" condition="'${nome_medico}' != '${EMPTY}'">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-11-19T01:55:55.347514" level="INFO">${qtd_na_lista} = 0</msg>
+<var>${qtd_na_lista}</var>
+<arg>css=tr:has-text("${nome_medico}")</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.331205" elapsed="0.016309"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-19T01:55:55.351542" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${qtd_na_lista}</arg>
+<arg>0</arg>
+<arg>msg=O médico não deveria ter sido cadastrado sem o campo obrigatório.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.349529" elapsed="0.002013"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:55.329191" elapsed="0.022351"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:55.329191" elapsed="0.022351"/>
+</if>
+<arg>${INPUT_CRM}</arg>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-11-19T01:55:54.063183" elapsed="1.288359"/>
+</kw>
+<tag>cadastro</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-11-19T01:55:47.802468" elapsed="7.551774"/>
+</test>
+<test id="s1-t3" name="CT03 - Impedir cadastro de medico sem informar a especializacao" line="40">
+<kw name="Acessar Pagina De Medicos" owner="Medico_Steps" type="SETUP">
+<kw name="Go To" owner="Browser">
+<msg time="2026-11-19T01:55:55.965273" level="INFO">Successfully opened URL http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.467948" elapsed="0.497325"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:56.076560" level="INFO">Waited for Element with selector text=Novo médico &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:55.967288" elapsed="0.111289"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:57.581028" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:56.078577" elapsed="1.502451"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:55.465933" elapsed="2.117106"/>
+</kw>
+<kw name="Gerar Codigo Unico">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-11-19T01:55:57.585051" level="INFO">${timestamp} = 1795064157</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-11-19T01:55:57.585051" elapsed="0.002013"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-19T01:55:57.588168" level="INFO">${codigo} = 064157</msg>
+<var>${codigo}</var>
+<arg>str(${timestamp})[-6:]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-19T01:55:57.588168" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${codigo}</value>
+<status status="PASS" start="2026-11-19T01:55:57.590217" elapsed="0.069090"/>
+</return>
+<msg time="2026-11-19T01:55:57.661320" level="INFO">${codigo} = 064157</msg>
+<var>${codigo}</var>
+<status status="PASS" start="2026-11-19T01:55:57.583039" elapsed="0.078281"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:55:57.673417" level="INFO">${nome} = Dr. Sem Especialidade 064157</msg>
+<var>${nome}</var>
+<arg>Dr. Sem Especialidade ${codigo}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:55:57.673417" elapsed="0.002013"/>
+</kw>
+<kw name="Abrir Formulario De Cadastro De Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:57.731969" level="INFO">Clicks the element 'text=Novo médico &gt;&gt; nth=0'.</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:57.729957" elapsed="0.380080"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:55:58.137971" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.112050" elapsed="0.025921"/>
+</kw>
+<msg time="2026-11-19T01:55:58.137971" level="INFO">${abriu} = True</msg>
+<var>${abriu}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.110037" elapsed="0.027934"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${abriu}">
+<kw name="Click" owner="Browser">
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:58.140023" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:58.144153" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:58.137971" elapsed="0.006182"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:58.137971" elapsed="0.006182"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:55:58.646443" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.144153" elapsed="0.502290"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:57.685493" elapsed="0.960950"/>
+</kw>
+<kw name="Preencher Dados Do Medico" owner="Medico_Steps">
+<if>
+<branch type="IF" condition="'${nome}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:58.656116" level="INFO">Fills the text 'Dr. Sem Especialidade 064157' in the given field.</msg>
+<arg>${INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.654100" elapsed="0.081933"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_NOME}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.736033" elapsed="0.096349"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:58.648455" elapsed="0.183927"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:58.648455" elapsed="0.183927"/>
+</if>
+<if>
+<branch type="IF" condition="'${crm}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:58.834394" level="INFO">Fills the text '99064157-PE' in the given field.</msg>
+<arg>${INPUT_CRM}</arg>
+<arg>${crm}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.834394" elapsed="0.083468"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_CRM}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:58.917862" elapsed="0.107039"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:58.832382" elapsed="0.194535"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:58.832382" elapsed="0.194535"/>
+</if>
+<if>
+<branch type="IF" condition="'${especialidade}' != '${EMPTY}'">
+<kw name="Get Property" owner="Browser">
+<var>${tag}</var>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>tagName</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:59.028935" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${tag}' == 'SELECT'">
+<kw name="Select Options By" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>label</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:59.030952" elapsed="0.002018"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:59.028935" elapsed="0.004035"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fill Text" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:59.032970" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:59.032970" elapsed="0.002017"/>
+</branch>
+<status status="NOT RUN" start="2026-11-19T01:55:59.028935" elapsed="0.006052"/>
+</if>
+<kw name="Press Keys" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:55:59.034987" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:55:59.026917" elapsed="0.008070"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:59.026917" elapsed="0.010086"/>
+</if>
+<if>
+<branch type="IF" condition="'${telefone}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:55:59.044995" level="INFO">Fills the text '(81) 97777-0000' in the given field.</msg>
+<arg>${INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:59.042979" elapsed="0.108239"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_TELEFONE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:59.151218" elapsed="0.374258"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:59.038812" elapsed="0.486664"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:55:59.038812" elapsed="0.486664"/>
+</if>
+<arg>nome=${nome}</arg>
+<arg>crm=99${codigo}-PE</arg>
+<arg>especialidade=${EMPTY}</arg>
+<arg>telefone=(81) 97777-0000</arg>
+<status status="PASS" start="2026-11-19T01:55:58.648455" elapsed="0.877021"/>
+</kw>
+<kw name="Salvar Cadastro Do Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:55:59.568354" level="INFO">Clicks the element 'css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0'.</msg>
+<arg>${BTN_SALVAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:55:59.566341" elapsed="0.115523"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:55:59.566341" elapsed="0.115523"/>
+</kw>
+<kw name="Validar Bloqueio Por Campo Obrigatorio" owner="Medico_Steps">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:56:00.697193" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:55:59.693774" elapsed="1.003419"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:00.723146" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:00.697193" elapsed="0.025953"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-11-19T01:56:00.821277" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-11-19T01:56:00.821277" level="INFO">${html5_valido} = True</msg>
+<var>${html5_valido}</var>
+<arg>${seletor_campo}</arg>
+<arg>(el) =&gt; el.checkValidity()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes the given JavaScript in the browser page.</doc>
+<status status="PASS" start="2026-11-19T01:56:00.723146" elapsed="0.098131"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-19T01:56:00.823323" level="INFO">Validação HTML5 do campo: True</msg>
+<arg>Validação HTML5 do campo: ${html5_valido}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-19T01:56:00.823323" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${nome_medico}' != '${EMPTY}'">
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-11-19T01:56:00.845809" level="INFO">${qtd_na_lista} = 0</msg>
+<var>${qtd_na_lista}</var>
+<arg>css=tr:has-text("${nome_medico}")</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:00.829368" elapsed="0.016441"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-19T01:56:00.847823" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${qtd_na_lista}</arg>
+<arg>0</arg>
+<arg>msg=O médico não deveria ter sido cadastrado sem o campo obrigatório.</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-19T01:56:00.847823" elapsed="0.002014"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:00.829368" elapsed="0.020469"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:00.827353" elapsed="0.022484"/>
+</if>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>${nome}</arg>
+<status status="PASS" start="2026-11-19T01:55:59.691760" elapsed="1.158077"/>
+</kw>
+<tag>cadastro</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-11-19T01:55:55.407075" elapsed="5.614503"/>
+</test>
+<test id="s1-t4" name="CT04 - Excluir medicos sem vinculos ativos" line="50">
+<kw name="Acessar Pagina De Medicos" owner="Medico_Steps" type="SETUP">
+<kw name="Go To" owner="Browser">
+<msg time="2026-11-19T01:56:01.663998" level="INFO">Successfully opened URL http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-11-19T01:56:01.211790" elapsed="0.452208"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:01.759746" level="INFO">Waited for Element with selector text=Novo médico &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:01.666015" elapsed="0.093731"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:56:03.261957" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:56:01.759746" elapsed="1.502211"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:01.209778" elapsed="2.052179"/>
+</kw>
+<kw name="Gerar Codigo Unico">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-11-19T01:56:03.265984" level="INFO">${timestamp} = 1795064163</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.263970" elapsed="0.002014"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-19T01:56:03.267998" level="INFO">${codigo} = 064163</msg>
+<var>${codigo}</var>
+<arg>str(${timestamp})[-6:]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.265984" elapsed="0.002014"/>
+</kw>
+<return>
+<value>${codigo}</value>
+<status status="PASS" start="2026-11-19T01:56:03.267998" elapsed="0.002991"/>
+</return>
+<msg time="2026-11-19T01:56:03.273038" level="INFO">${codigo} = 064163</msg>
+<var>${codigo}</var>
+<status status="PASS" start="2026-11-19T01:56:03.263970" elapsed="0.009068"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:03.277069" level="INFO">${nome} = Dr. Exclusao 064163</msg>
+<var>${nome}</var>
+<arg>Dr. Exclusao ${codigo}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.275055" elapsed="0.002014"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:03.281099" level="INFO">${crm} = EX064163-PE</msg>
+<var>${crm}</var>
+<arg>EX${codigo}-PE</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.279084" elapsed="0.002015"/>
+</kw>
+<kw name="Abrir Formulario De Cadastro De Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:03.323392" level="INFO">Clicks the element 'text=Novo médico &gt;&gt; nth=0'.</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.323392" elapsed="0.159653"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:03.723302" level="INFO">Waited for Element with selector css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.485063" elapsed="0.238239"/>
+</kw>
+<msg time="2026-11-19T01:56:03.723302" level="INFO">${abriu} = True</msg>
+<var>${abriu}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=4s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.483045" elapsed="0.241771"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${abriu}">
+<kw name="Click" owner="Browser">
+<arg>${BTN_NOVO_MEDICO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:56:03.724816" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${BTN_SALVAR}</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-11-19T01:56:03.724816" elapsed="0.002012"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:56:03.724816" elapsed="0.002012"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:03.724816" elapsed="0.002012"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:56:04.227403" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:56:03.726828" elapsed="0.500575"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:03.321348" elapsed="0.906055"/>
+</kw>
+<kw name="Preencher Dados Do Medico" owner="Medico_Steps">
+<if>
+<branch type="IF" condition="'${nome}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:56:04.233185" level="INFO">Fills the text 'Dr. Exclusao 064163' in the given field.</msg>
+<arg>${INPUT_NOME}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.231168" elapsed="0.184879"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_NOME}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.416047" elapsed="0.111211"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:04.231168" elapsed="0.296090"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:04.231168" elapsed="0.296090"/>
+</if>
+<if>
+<branch type="IF" condition="'${crm}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:56:04.530289" level="INFO">Fills the text 'EX064163-PE' in the given field.</msg>
+<arg>${INPUT_CRM}</arg>
+<arg>${crm}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.530289" elapsed="0.099603"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_CRM}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.631908" elapsed="0.113411"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:04.528274" elapsed="0.217045"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:04.527258" elapsed="0.218061"/>
+</if>
+<if>
+<branch type="IF" condition="'${especialidade}' != '${EMPTY}'">
+<kw name="Get Property" owner="Browser">
+<msg time="2026-11-19T01:56:04.915588" level="INFO">Property: 'INPUT'</msg>
+<msg time="2026-11-19T01:56:04.915588" level="INFO">${tag} = INPUT</msg>
+<var>${tag}</var>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>tagName</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the ``property`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.747333" elapsed="0.168255"/>
+</kw>
+<if>
+<branch type="IF" condition="'${tag}' == 'SELECT'">
+<kw name="Select Options By" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>label</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-11-19T01:56:04.917602" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-11-19T01:56:04.915588" elapsed="0.002014"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:56:04.919615" level="INFO">Fills the text 'Dermatologia' in the given field.</msg>
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>${especialidade}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.917602" elapsed="0.052682"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:04.917602" elapsed="0.052682"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:04.915588" elapsed="0.054696"/>
+</if>
+<kw name="Press Keys" owner="Browser">
+<arg>${CAMPO_ESPECIALIDADE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:04.972302" elapsed="0.162047"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:04.745319" elapsed="0.389030"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:04.745319" elapsed="0.389030"/>
+</if>
+<if>
+<branch type="IF" condition="'${telefone}' != '${EMPTY}'">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-11-19T01:56:05.144423" level="INFO">Fills the text '(81) 96666-0000' in the given field.</msg>
+<arg>${INPUT_TELEFONE}</arg>
+<arg>${telefone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.142408" elapsed="0.091317"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>${INPUT_TELEFONE}</arg>
+<arg>Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.233725" elapsed="0.036217"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:05.134349" elapsed="0.137612"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:05.134349" elapsed="0.137612"/>
+</if>
+<arg>nome=${nome}</arg>
+<arg>crm=${crm}</arg>
+<arg>especialidade=Dermatologia</arg>
+<arg>telefone=(81) 96666-0000</arg>
+<status status="PASS" start="2026-11-19T01:56:04.229151" elapsed="1.042810"/>
+</kw>
+<kw name="Salvar Cadastro Do Medico" owner="Medico_Steps">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:05.282045" level="INFO">Clicks the element 'css=:is(button[type="submit"], button:has-text("Salvar"), button:has-text("Cadastrar")) &gt;&gt; nth=0'.</msg>
+<arg>${BTN_SALVAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.280030" elapsed="0.137682"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:05.278013" elapsed="0.147787"/>
+</kw>
+<kw name="Validar Medico Na Listagem" owner="Medico_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:05.445700" level="INFO">${linha} = css=tr:has-text("EX064163-PE") &gt;&gt; nth=0</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${crm}") &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.445700" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:05.580448" level="INFO">Waited for Element with selector css=tr:has-text("EX064163-PE") &gt;&gt; nth=0 at state visible</msg>
+<arg>${linha}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.447714" elapsed="0.132734"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-11-19T01:56:05.623370" level="INFO">Text: ['D\nDr. Exclusao 064163\n\tEX064163-PE\tDermatologia\t(81) 96666-0000\t ']</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${nome}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.580448" elapsed="0.042922"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-11-19T01:56:05.659837" level="INFO">Text: ['D\nDr. Exclusao 064163\n\tEX064163-PE\tDermatologia\t(81) 96666-0000\t ']</msg>
+<arg>${linha}</arg>
+<arg>contains</arg>
+<arg>${especialidade}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.623370" elapsed="0.036467"/>
+</kw>
+<arg>nome=${nome}</arg>
+<arg>crm=${crm}</arg>
+<arg>especialidade=Dermatologia</arg>
+<status status="PASS" start="2026-11-19T01:56:05.436019" elapsed="0.223818"/>
+</kw>
+<kw name="Solicitar Exclusao Do Medico" owner="Medico_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:05.663866" level="INFO">${linha} = css=tr:has-text("EX064163-PE") &gt;&gt; nth=0</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${identificador}") &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.663866" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:05.685533" level="INFO">Waited for Element with selector css=tr:has-text("EX064163-PE") &gt;&gt; nth=0 at state visible</msg>
+<arg>${linha}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.665879" elapsed="0.021266"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:05.689286" level="INFO">${btn_excluir} = css=tr:has-text("EX064163-PE") &gt;&gt; nth=0 &gt;&gt; css=:is(button, a) &gt;&gt; nth=1</msg>
+<var>${btn_excluir}</var>
+<arg>${linha} &gt;&gt; css=:is(button, a) &gt;&gt; nth=1</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.687145" elapsed="0.002141"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:05.692321" level="INFO">Clicks the element 'css=tr:has-text("EX064163-PE") &gt;&gt; nth=0 &gt;&gt; css=:is(button, a) &gt;&gt; nth=1'.</msg>
+<arg>${btn_excluir}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.689286" elapsed="0.067534"/>
+</kw>
+<arg>${crm}</arg>
+<status status="PASS" start="2026-11-19T01:56:05.661851" elapsed="0.096990"/>
+</kw>
+<kw name="Confirmar Modal De Exclusao" owner="Medico_Steps">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:05.912149" level="INFO">Waited for Element with selector css=:is(button:has-text("Excluir"), button:has-text("Confirmar"), button:has-text("Apagar"), button:has-text("Sim")) &gt;&gt; nth=-1 at state visible</msg>
+<arg>${BTN_CONFIRMAR_EXCLUSAO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.762874" elapsed="0.149275"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:05.914166" level="INFO">Clicks the element 'css=:is(button:has-text("Excluir"), button:has-text("Confirmar"), button:has-text("Apagar"), button:has-text("Sim")) &gt;&gt; nth=-1'.</msg>
+<arg>${BTN_CONFIRMAR_EXCLUSAO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:05.912149" elapsed="0.116419"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:05.762874" elapsed="0.265694"/>
+</kw>
+<kw name="Validar Medico Excluido Da Listagem" owner="Medico_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:06.032599" level="INFO">${linha} = css=tr:has-text("EX064163-PE")</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${identificador}")</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:06.030584" elapsed="0.002015"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:06.176663" level="INFO">Waited for Element with selector css=tr:has-text("EX064163-PE") at state detached</msg>
+<arg>${linha}</arg>
+<arg>detached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:06.032599" elapsed="0.144064"/>
+</kw>
+<arg>${crm}</arg>
+<status status="PASS" start="2026-11-19T01:56:06.030584" elapsed="0.146079"/>
+</kw>
+<tag>exclusao</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2026-11-19T01:56:01.099912" elapsed="5.082790"/>
+</test>
+<test id="s1-t5" name="CT05 - Nao permitir exclusao de medicos com consultas registradas" line="65">
+<kw name="Acessar Pagina De Medicos" owner="Medico_Steps" type="SETUP">
+<kw name="Go To" owner="Browser">
+<msg time="2026-11-19T01:56:06.639185" level="INFO">Successfully opened URL http://187.41.119.192/medicos</msg>
+<arg>${URL_MEDICOS}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2026-11-19T01:56:06.262568" elapsed="0.376617"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:06.791705" level="INFO">Waited for Element with selector text=Novo médico &gt;&gt; nth=0 at state visible</msg>
+<arg>${BTN_NOVO_MEDICO}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:06.641203" elapsed="0.150502"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-19T01:56:08.295310" level="INFO">Slept 1 second 500 milliseconds.</msg>
+<arg>1.5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-19T01:56:06.791705" elapsed="1.503605"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:06.261051" elapsed="2.034259"/>
+</kw>
+<kw name="Solicitar Exclusao Do Medico" owner="Medico_Steps">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:08.299339" level="INFO">${linha} = css=tr:has-text("50010") &gt;&gt; nth=0</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${identificador}") &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.297324" elapsed="0.002015"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:08.326786" level="INFO">Waited for Element with selector css=tr:has-text("50010") &gt;&gt; nth=0 at state visible</msg>
+<arg>${linha}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.299339" elapsed="0.027447"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:08.328802" level="INFO">${btn_excluir} = css=tr:has-text("50010") &gt;&gt; nth=0 &gt;&gt; css=:is(button, a) &gt;&gt; nth=1</msg>
+<var>${btn_excluir}</var>
+<arg>${linha} &gt;&gt; css=:is(button, a) &gt;&gt; nth=1</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.326786" elapsed="0.002016"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:08.335606" level="INFO">Clicks the element 'css=tr:has-text("50010") &gt;&gt; nth=0 &gt;&gt; css=:is(button, a) &gt;&gt; nth=1'.</msg>
+<arg>${btn_excluir}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.328802" elapsed="0.085009"/>
+</kw>
+<arg>${MEDICO_COM_CONSULTA}</arg>
+<status status="PASS" start="2026-11-19T01:56:08.297324" elapsed="0.116487"/>
+</kw>
+<kw name="Validar Bloqueio De Exclusao Com Consulta Registrada" owner="Medico_Steps">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:08.528586" level="INFO">Waited for Element with selector css=:is(button:has-text("Excluir"), button:has-text("Confirmar"), button:has-text("Apagar"), button:has-text("Sim")) &gt;&gt; nth=-1 at state visible</msg>
+<arg>${BTN_CONFIRMAR_EXCLUSAO}</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.426791" elapsed="0.103812"/>
+</kw>
+<msg time="2026-11-19T01:56:08.530603" level="INFO">${modal_visivel} = True</msg>
+<var>${modal_visivel}</var>
+<arg>Wait For Elements State</arg>
+<arg>${BTN_CONFIRMAR_EXCLUSAO}</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.422764" elapsed="0.107839"/>
+</kw>
+<if>
+<branch type="IF" condition="${modal_visivel}">
+<kw name="Click" owner="Browser">
+<msg time="2026-11-19T01:56:08.532620" level="INFO">Clicks the element 'css=:is(button:has-text("Excluir"), button:has-text("Confirmar"), button:has-text("Apagar"), button:has-text("Sim")) &gt;&gt; nth=-1'.</msg>
+<arg>${BTN_CONFIRMAR_EXCLUSAO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.530603" elapsed="0.101723"/>
+</kw>
+<status status="PASS" start="2026-11-19T01:56:08.530603" elapsed="0.101723"/>
+</branch>
+<status status="PASS" start="2026-11-19T01:56:08.530603" elapsed="0.101723"/>
+</if>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:08.762334" level="INFO">Waited for Element with selector css=:is([role="alert"], .toast-error, .swal2-popup, div:has-text("consulta"), div:has-text("vínculo"), div:has-text("não é possível")) &gt;&gt; nth=0 at state visible</msg>
+<arg>${ALERTA_ERRO_INTEGRIDADE}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.632326" elapsed="0.132024"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-19T01:56:08.766365" level="INFO">${linha} = css=tr:has-text("50010") &gt;&gt; nth=0</msg>
+<var>${linha}</var>
+<arg>css=tr:has-text("${identificador}") &gt;&gt; nth=0</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.764350" elapsed="0.002015"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-11-19T01:56:08.800946" level="INFO">Waited for Element with selector css=tr:has-text("50010") &gt;&gt; nth=0 at state visible</msg>
+<arg>${linha}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.768380" elapsed="0.032566"/>
+</kw>
+<arg>${MEDICO_COM_CONSULTA}</arg>
+<status status="PASS" start="2026-11-19T01:56:08.420576" elapsed="0.380370"/>
+</kw>
+<tag>exclusao</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-11-19T01:56:06.228603" elapsed="2.585991"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2026-11-19T01:56:23.490704" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-19T01:56:08.912613" elapsed="14.582117"/>
+</kw>
+<doc>Suíte de testes automatizados - Cadastro e Gerenciamento de Médicos (Viita v1.0.1).</doc>
+<status status="PASS" start="2026-11-19T01:54:48.350405" elapsed="95.146337"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">cadastro</stat>
+<stat pass="2" fail="0" skip="0">exclusao</stat>
+<stat pass="3" fail="0" skip="0">negativo</stat>
+<stat pass="2" fail="0" skip="0">positivo</stat>
+</tag>
+<suite>
+<stat name="TesteMedico" id="s1" pass="5" fail="0" skip="0">TesteMedico</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

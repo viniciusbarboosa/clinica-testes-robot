@@ -1,0 +1,13 @@
+*** Variables ***
+${TITULO_AGENDAMENTO}          //h5[contains(normalize-space(.),'Marcação de consultas')]
+${BOTAO_NOVA_CONSULTA}         //button[contains(.,'Nova consulta')]
+${MODAL_NOVA_CONSULTA}        //div[@role='dialog']
+${SELECT_AGENDAMENTO_MEDICO}   //div[@role='dialog']//select[@name='form.MedicoId']
+${SELECT_AGENDAMENTO_PACIENTE}    //div[@role='dialog']//select[@name='form.PacienteId']
+${INPUT_AGENDAMENTO_DATA}      //div[@role='dialog']//input[@name='form.Data']
+${INPUT_AGENDAMENTO_HORA}      //div[@role='dialog']//input[@name='form.Hora']
+${SELECT_AGENDAMENTO_DURACAO}  //div[@role='dialog']//select[@name='form.Duracao']
+${BOTAO_SALVAR_CONSULTA}       //div[@role='dialog']//button[@type='submit']
+${ALERTA_SUCESSO_AGENDAMENTO}  //div[contains(@class,'alert-success')]
+${ALERTA_ERRO_AGENDAMENTO}     //div[contains(@class,'alert-danger')]
+${MSG_VALIDACAO_AGENDAMENTO}   //div[@role='dialog']//*[contains(@class,'text-danger') or contains(@class,'invalid-feedback') or contains(@class,'validation-message')]
